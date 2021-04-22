@@ -38,10 +38,6 @@ Hn=np.zeros(len(H),dtype='complex')
 
 plot(H, Hn,'H(n)')
 
-for i in range(len(H)):
-    s=0
-    for j in range(len(H)):
-        s=s+H[j]*np.exp((-c*2*np.pi*i*j)/len(H))
-    Hn[i]=s
+
 
 
