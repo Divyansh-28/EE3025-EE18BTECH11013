@@ -205,5 +205,92 @@ Plots:\
     \includegraphics[width=9cm]{H(n)_angle.png}
     \caption{Phase of h(k)}
     
-\end{figure}   
+\end{figure} 
+
+\vspace{5cm}
+\section{DFT Matrix}
+\vspace{0.5cm}
+
+\newline{Now, Let's take e^{-j2\pi kn/N} = W^{ nk } }
+
+\newline{Expressing (2.08) in the form of DFT Matrix, N=6}
+\newline{}
+\begin{bmatrix}
+X(0)\\
+X(1)\\
+X(2)\\
+X(3)\\
+X(4)\\
+X(5)\\
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 \\
+1 & W & .&.&.& W^{5}\\
+1 & W^{2} & .&.&.& W^{10}\\
+1 & W^{3} & .&.&.& W^{15}\\
+1 & W^{4} & .&.&.& W^{20}\\
+1 & W^{5} & .&.&.& W^{25}\\
+\end{bmatrix}
+\begin{bmatrix}
+x(0)\\
+x(1)\\
+x(2)\\
+x(3)\\
+x(4)\\
+x(5)\\
+\end{bmatrix}\vspace{0.5cm}
+
+\newline{We know that x(n)= \{ 1,2,3,4,2,1 \}}
+\newline{putting the value of x(n) and after solving We get }
+    
+
+\vspace{5cm}
+\newline{X(0) = 13 + 0j}
+\newline{X(1) = -4 -2.73j}
+\newline{X(2) = 1 + 0j}
+\newline{X(3) = -1 - 3.2j}
+\newline{X(4) = 1 + 0j}
+\newline{X(5) = -4 + 2.73j}
+\vspace{1cm}
+\newline{Which matches with The plots of X(n)}
+
+\vspace{1cm}
+    \text{Similarly for H(k), Let's Take N=6 too}\newline{}
+    \newline{}
+    \begin{bmatrix}
+H(0)\\
+H(1)\\
+H(2)\\
+H(3)\\
+H(4)\\
+H(5)\\
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 \\
+1 & W & .&.&.& W^{5}\\
+1 & W^{2} & .&.&.& W^{10}\\
+1 & W^{3} & .&.&.& W^{15}\\
+1 & W^{4} & .&.&.& W^{20}\\
+1 & W^{5} & .&.&.& W^{25}\\
+\end{bmatrix}
+\begin{bmatrix}
+h(0)\\
+h(1)\\
+h(2)\\
+h(3)\\
+h(4)\\
+h(5)\\
+\end{bmatrix}\vspace{0.5cm}
+\newline{We know that \[h(n) = \left[ \frac{-1}{2}\right]^{n-2} u(n-2) + \left[ \frac{-1}{2}\right]^n u(n)  \]}
+\newline{putting the value of h(n) and after solving We get,  }
+
+
+\newline{H(0) = 1.29 + 0j}
+\newline{H(1) = 0.54 -0.51j}
+\newline{H(2) = -1.1 + 1.53j}
+\newline{H(3) = -3.8 + 0j}
+\newline{H(4) = -1.1 - 1.53j}
+\newline{H(5) = 0.54 + 0.51j}
+\vspace{1cm}
+\newline{Which matches with The plots of H(n)}
 \end{document}
